@@ -1,7 +1,8 @@
 var string = 'someWord';
 var number = 2;
-var lokingFor= string + number;
+
 var lokingFor2= string - number; 
+var lokingFor= string + number;
 
 console.log(lokingFor2);
 console.log(lokingFor);
