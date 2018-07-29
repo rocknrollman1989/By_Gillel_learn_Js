@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="PriceForFruit.css">
+    <script src="PriceForFruit.js"></script>
+    <title>PriceForFruit</title>
+</head>
+<body>
+    <div class="background">
+        <div class="price">
+            <h2>Приветствую тебя, директор!</h2>
+            <p>Говорят, ты завез новые фрукты, и решил заработать на этом? Дружище, я помогу! 
+               Напиши, что привезли, а я сделаю всю грязную работу: ценник создам, и расчитаю тебе стоимость.
+            </p>
+            <label><p>Что привезли?<input type="text" id="orderFruit"> </p></label>
+            <label><p>Почем взял? <input type="text" id="priceBuy"></p></label>
+            <label><p>Сколько нацениваем? Только в "%"! Хочешь скидку расчитать? ставь "-"<input type="text" id="sellOnlyToday"></p></label>
+            <button onclick="multiply()"> Комон, давай считай!</button>
+            <div class="doYouBuyThisShit" id="out">  </div>
+        </div>
+
+    </div>
+</body>
+</html>
