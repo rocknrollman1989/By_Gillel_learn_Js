@@ -22,8 +22,9 @@ function multiply(){
         else {
             result = priceBuy+(priceBuy*(sellOnlyToday/100));
             result = result.toFixed(2)
-          let  dnoComment = (result<=priceBuy)? '\n Благотворительность? Жить за что будешь...': '\n Заработаешь хоть на пиво...' ;
-            document.getElementById('out').innerHTML = orderFruit +'\n ' + result + ' гривен' + dnoComment;
+            let  dnoComment = (result<=priceBuy)? ' Благотворительность? Жить за что будешь...': ' Заработаешь хоть на пиво...' ;
+            let wantToKnow= (`${orderFruit} \n\ ${result} \n\ гривен ${dnoComment}`);
+          document.getElementById('out').innerHTML = wantToKnow;
         };
 
     
