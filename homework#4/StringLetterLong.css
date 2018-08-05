@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+    margin: 0;
+}
+
+.FormFor{
+    width: 30%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 20%;
+    background-color: aqua;
+}

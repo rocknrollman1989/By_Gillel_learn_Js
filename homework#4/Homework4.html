@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Homework4.css">
+    <script src="Homework4.js"></script>
+    <title>PriceForFruit</title>
+</head>
+<body>
+    <div class="background">
+        <div class="price">
+            <h2>ATБ</h2>
+            <p>Расчет стоимости скидки(если она конечно есть) </p>
+            <label><p>Что продаем<input type="text" id="orderFruit"> </p></label>
+            <label><p>Цена актуальная <input type="text" id="priceBuy"></p></label>
+            <label><p>Скидонька? если панам не угодно, можем не заполнять в "%"<br/><input type="text" id="sellOnlyToday"></p></label>
+            <button onclick="makingAPrice()"> Барин изволит кинуть кости?</button>
+            <div class="doYouBuyThisShit" >
+                <p class="nameOfYourFruit" id="out"> </p>
+                <p class="PriceOfYourFruit" id="outPrice"> </p>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
