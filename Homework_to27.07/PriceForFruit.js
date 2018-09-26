@@ -23,10 +23,11 @@ function multiply(){
             result = priceBuy+(priceBuy*(sellOnlyToday/100));
             result = result.toFixed(2)
             let  dnoComment = (result<=priceBuy)? ' Благотворительность? Жить за что будешь...': ' Заработаешь хоть на пиво...' ;
-            let wantToKnow= (`${orderFruit} \n\ ${result} \n\ гривен ${dnoComment}`);
+            let wantToKnow= (`${orderFruit} 
+             ${result} гривен ${dnoComment}`);
           document.getElementById('out').innerHTML = wantToKnow;
         };
-
+    }
     
     
    
