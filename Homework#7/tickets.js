@@ -7,48 +7,39 @@ let cashbox = {
     chetvertak: prompt('сколько купюр в 25 грн?','1'),
     poltinnik: prompt('Сколько купюр в 50 грн?', '1'),
     stolnik: prompt('сколько купюр в 100 грн?', '1'),
-    finalBattle: function(){
-        let goToMoney= confirm('У меня закончились деньги. Не могу дать сдачи. Будет без сдачи?');
+    
+        checkOurCache: function(){
+
+            if(ourStartTicet==0){
+                ourStartTicet = this.tickets;
+                
+            }
+
+            if(this.tickets == 0){
+                alert(`Все билеты рапроданы, вы проиграли! театр заработал ${ourStartTicet*25} грн`);
+                return;
+            } 
+            
+            if(cashbox.poltinnik == 0 || cashbox.chetvertak == 0){
+                return finalBattle()
+            }
+
+        else setYourMoney();
+        }
+}
+
+function finalBattle(){
+
+    let goToMoney = confirm('У меня закончились деньги. Не могу дать сдачи. Будет без сдачи?');
             if(goToMoney==false){
                 alert(" Вы победили злобную кассиршу! Поздравляем!");
-                return theEnd();
+                return  ;
             };
 
-            alert(" Вы проиграли злобной кассирше! Идите менять деньги!");
-            return theEnd();
-        
-              
-    },
-    checkOurCache: function(){
-
-        if(ourStartTicet==0){
-            ourStartTicet = this.tickets;
-            
-        }
-
-        if(this.tickets == 0){
-            alert(`Все билеты рапроданы, вы проиграли! театр заработал ${ourStartTicet*25} грн`);
-            return;
-        } 
-            // if(this.poltinnik == 0 || this.chetvertak == 0){
-            //             return finalBattle();
-                    // console.log('100');
-                    // this.poltinnik == 0 ?
-                    // confirm('Вы бы не могли бы разменять 50 грн? или дать другую купюру? мне лень вставать...'):
-                    // confirm('Вы бы не могли бы разменять 100 грн? или дать другую купюру? мне лень вставать...');
-                    //     if(this.confirm==false){
-                    //     alert(" Вы победили злобную кассиршу! Поздравляем!");
-                    //     return;
-                    //     }
-                    //     alert(" Вы проиграли злобной кассирше! Идите менять деньги!");
-                    //     return;
-                // }
-    setYourMoney();
-    }
-}
-function theEnd(){
-    alert('The END!');
-}
+        alert(" Вы проиграли злобной кассирше! Идите менять деньги!");
+        return ; 
+    
+};
 
 // console.log(cashbox);
 function setYourMoney(){
@@ -69,7 +60,8 @@ function letPlayGame(yourMoney){
         cashbox.checkOurCache();
     }
     if(yourMoney==50){
-        cashbox.chetvertak == 0? cashbox.finalBattle(): null;
+        cashbox.chetvertak == 0? finalBattle(): null;
+
         cashbox.tickets--;
         cashbox.chetvertak--;
         cashbox.poltinnik++;
@@ -78,8 +70,8 @@ function letPlayGame(yourMoney){
     }
     if(yourMoney==100){
         alert('A меньше нет? - ворчит кассирша');
-        cashbox.poltinnik == 0? cashbox.finalBattle(): null;
-        cashbox.chetvertak == 0? cashbox.finalBattle(): null;
+        cashbox.poltinnik == 0? finalBattle(): null;
+        cashbox.chetvertak == 0? finalBattle(): null;
         cashbox.tickets--;
         cashbox.chetvertak--;
         cashbox.poltinnik--;
