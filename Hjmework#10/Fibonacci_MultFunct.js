@@ -23,18 +23,3 @@ function ourInterestingRessult(someFunc){
     return someFunc.apply(this, [].slice.call(arguments));
 }
 ourInterestingRessult(multipply, [1, 2, 3]);
-
-// function mul() {
-//     var resultMul = 1;
-//     for (var i = 0; i < arguments.length; i++) {
-//     resultMul *= arguments[i];
-//     }
-//     console.log(resultMul);
-//   }  
-
-// function applyAll(func) {
-//     return func.apply(this, [].slice.call(arguments, 1));
-//   }
-
-// applyAll(sum, 1, 2, 3, 4, 5); 
-// applyAll(mul, 2, 3, 4); 
