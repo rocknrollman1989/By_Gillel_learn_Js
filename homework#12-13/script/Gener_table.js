@@ -35,12 +35,6 @@ let tableInsert = document.createElement('table');
 tableInsert.className = "tabble-decoration";
 blockWithTableDecor.appendChild(tableInsert);
 
-    // let rowOfTheTable = document.createElement('tr');
-    // // tableInsert.appendChild(rowOfTheTable);
-
-    // let columnOfTheRow = document.createElement('td');
-    // // rowOfTheTable.appendChild(columnOfTheRow);
-
 
 
 function createTabble(){

@@ -37,32 +37,46 @@ tryToLearnCache.appendChild(tryToLearnCacheInfo);
         tryToLearnCache.appendChild(CacheInsert);
 
         
-        var cachedResault;
-        var numvar1,numvar2;
+    function chek(){
+        let firstValue = document.getElementById("One").value;
+        let secondValue = document.getElementById("Two").value;
         
-         function chek(){
-           
-                        let complexFunction = function(num1, num2){
-                            numvar1 = num1;
-                            numvar2 = num2;
-                
-                            cachedResault = +numvar1 + +numvar2;
-                            CacheInsert.innerHTML = `занес в кэш ${cachedResault}`;
-                        }
 
+       let complexFunc = function(firstValue, secondValue){
+        return firstValue+secondValue;
+             
+       }
 
-            let num1 = document.getElementById("One").value;
-            let num2 = document.getElementById("Two").value;
+       function cash(func){
 
-            num1===numvar1&num2===numvar2?
-            CacheInsert.innerHTML = `взял из кэша ${cachedResault}`:
-            complexFunction(num1, num2);
+           let ourObj = {
+            firstMemory: firstValue,
+            secondMemory: secondValue,
+            checkCash: function(){
+                if(firstValue!=this.firstMemory||this.secondMemory&&secondValue!=this.firstMemory||this.secondMemory){
+                    this.firstMemory==firstValue;
+                    this.secondMemory==secondValue;
+                    console.log('111')
+                    
+                }
+            }
+           };
+
+           ourObj.checkCash();
+        //    ourObj.ressault = ressault;
+            // ourObj.firstValue = firstValue;
+            // ourObj.secondValue = secondValue;
+            // ourObj.ressault = func;
+
+        //    console.log(func)
+          
+            return func ;
+       }
+
+       let cacheFunction = cash(complexFunc);
+    //    console.log(cacheFunction);
+    //    CacheInsert.innerHTML = 
+
+       console.log(cacheFunction(firstValue, secondValue))
         
-           
-            
-            // complexFunction(numvar1, numvar2);
-        }
-        
-        
-        
-        
+    }

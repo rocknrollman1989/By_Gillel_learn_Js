@@ -1,6 +1,6 @@
 let leftMenuContainer = document.createElement('div')
 leftMenuContainer.className = 'left-menu-open'
-backGroundContainer.appendChild(leftMenuContainer)
+content.appendChild(leftMenuContainer)
 
 let burgLeftMenu = document.createElement('div')
 burgLeftMenu.className = 'burg-left-menu'
