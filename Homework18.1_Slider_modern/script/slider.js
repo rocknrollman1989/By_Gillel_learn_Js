@@ -23,11 +23,6 @@ stopPlay[0].style.background = "url('./static/stop.png') no-repeat";
 
 sliderOurElements = Array.prototype.slice.call(slideWidht); //переводим в массив для работы с дом элем.
 
-
-
-
-
-
 let goAutoLeftSlider = setInterval(goSlidesRight,5000); // авто-старт
 
 function goSlidesRight(){

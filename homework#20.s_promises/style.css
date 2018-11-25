@@ -1,0 +1,38 @@
+.info{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+background-color: antiquewhite;
+}
+.promise{
+display: block;
+margin-top: 30px;
+}
+.status{
+width: 200px;
+height: 40px;
+transition-property: background;
+transition-duration: 5s;
+/* background: linear-gradient(to right, #fff -100%, blue 100%); */
+background: blue;
+border: 1px solid blue;
+position: relative;
+left: 300px;
+top:-30px;
+}
+.status.alert{
+    border: 2px solid red;
+}
+/* .status:hover{
+    background: #fff;
+    background: #fff;
+    transition: all 5s;
+} */
+.status.active{
+    background: #fff; 
+}
+#anim{
+    
+    
+}
